@@ -4,6 +4,10 @@ const apiKey='Ef_Q2eQA1uVRmtOUcYWj7C2G649eS-gricOM8Vem84Q';
 const apiUrl=`https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 
+//displayPhoths()=> user sees photos!
+
+//response.json=photosArray
+//then loop for each photo edit the img
 //get photos from unsplash api
 async function getPhotos(){
     try{
