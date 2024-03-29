@@ -77,4 +77,30 @@ async function getPhotos(){
         //catch error here
     }
 }
+
+//check if scrolling near bottom of page to load more pages
+window.addEventListener('scroll',()=>{
+console.log('scrolled');
+if(window.innerHeight + window.scrollY >= document.body.offsetHeight -1000){
+    getPhotos();
+    console.log("LOAD MORE");
+}
+
+
+});
+
+
+
+//window.scrollY : distance from top of page user has scrolled
+
+//window.innerHeight : total height of browser window (constant unless browesr window resized)
+
+//document.body.offsetHeight : height of everything in body, including what is not the view (stays consistent)
+
+//load more when user scrolls to a point, before end of content, 1000px less (can be any value) => we need to subtract from offsetHeight to trigger event before bottom is reached
+
+
+
+
 getPhotos();
+
