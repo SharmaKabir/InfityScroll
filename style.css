@@ -8,7 +8,7 @@ html{
 body{
     margin:0;
     font-family: Oswald, sans-serif;
-    background:whitesmoke;
+    background:rgb(0, 0, 0);
 }
 h1{
     text-align:center;
@@ -16,7 +16,7 @@ h1{
     margin-bottom: 15px;
 font-size:40px;
 letter-spacing:5px;
-color:#161616;
+color:#ffffff;
 
 }
 
@@ -26,7 +26,7 @@ color:#161616;
     bottom:0;
     left:0;
     right:0;
-    background:whitesmoke;
+    background:rgb(255, 255, 255);
 
 }
 .loader img{
@@ -53,6 +53,6 @@ h1{
 }
 .image-container{
     margin:10px;
-    
+
 }
 }
