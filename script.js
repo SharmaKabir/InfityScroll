@@ -6,6 +6,30 @@ const imageContainer = document.getElementById('image-container');
 const loader=document.getElementById('loader');
 let photosArray=[];
 
+
+
+
+
+
+
+//helper fn to set attributes
+//key is src,alt,href
+function setAttributes(element,attributes){
+    for(const key in attributes){
+        element.setAttribute(key,attributes[key]);
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
 //displayPhoths()=> user sees photos!
 
 //response.json=photosArray
@@ -17,15 +41,31 @@ photosArray.forEach((photo)=>{
 //create element
 //create anchor to link unsplash
 const item=document.createElement('a');
-item.setAttribute('href',photo.links.html);
-item.setAttribute('target','_blank');
+// item.setAttribute('href',photo.links.html);
+// item.setAttribute('target','_blank');
 //create img for photo
+setAttributes(item,{
+href:photo.links.html,
+target:'_blank',
+});
 const img=document.createElement("img");
-img.setAttribute('src',photos.urls.regular);
-img.setAttribute('alt',photo.alt_description);
+//img.setAttribute('src',photo.urls.regular);
+// img.setAttribute('alt',photo.alt_description);
+// img.setAttribute('title',photo.alt_description);
+setAttributes(img,{
+src:photo.urls.regular,
+alt:photo.alt_description,
+title:photo.alt_description,
+});
+//put img inside anchor, then put both inside container
+item.appendChild(img);
+imageContainer.appendChild(item);
 
 });
 }
+
+
+
 async function getPhotos(){
     try{
         const response =await fetch(apiUrl);
