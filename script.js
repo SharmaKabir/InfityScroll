@@ -1,7 +1,8 @@
 //https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
 let intialLoad=true;
 let count= 5;
-const apiKey='Ef_Q2eQA1uVRmtOUcYWj7C2G649eS-gricOM8Vem84Q';
+// const apiKey='Ef_Q2eQA1uVRmtOUcYWj7C2G649eS-gricOM8Vem84Q';
+const apiKey='jFgS8tteGD425f4oZfygQVaVnD6gt6GucN2yyz3xFek';
 const apiUrl=`https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 const imageContainer = document.getElementById('image-container');
 const loader=document.getElementById('loader');

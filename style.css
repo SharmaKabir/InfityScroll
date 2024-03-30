@@ -10,6 +10,11 @@ body{
     font-family: Oswald, sans-serif;
     background:rgb(0, 0, 0);
 }
+h3{
+    color:#ffffff;
+    text-align: center;
+    margin-top: 5px;
+}
 h1{
     text-align:center;
     margin-top:25px;
@@ -51,8 +56,30 @@ margin:10px 30%;
 h1{
     font-size: 20px;
 }
+h1 img{
+    .image-container {
+        height: 80px;
+        width: 80px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .image-container {
+            height: 60px;
+            width: 60px;
+        }
+    }
 .image-container{
     margin:10px;
 
 }
+}
+}
+
+p{
+    text-align:center;
+    margin-top:25px;
+    margin-bottom: 15px;
+font-size:10px;
+letter-spacing:1px;
+color:#ffffff;
 }
